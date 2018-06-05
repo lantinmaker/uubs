@@ -11,6 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::group(['prefix' => 'admin' , 'namespace' => 'Admin'] , function (){
+        require base_path('routes/admin.php');
+    });
+
+    Route::group(['prefix' => 'user' , 'namespace' => 'User'] , function (){
+        require base_path('routes/user.php');
+    });
+
+    Route::group(['prefix' => 'school' , 'namespace' => 'School'] , function (){
+        require base_path('routes/school.php');
+    });
+
+    Route::group(['prefix' => 'blog' , 'namespace' => 'Blog'] , function (){
+        require base_path('routes/blog.php');
+    });
 });
