@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\Contracts\ModelControllerInterface;
+use App\Http\Controllers\Contracts\ModelControllerInterface;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

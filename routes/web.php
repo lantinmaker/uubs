@@ -16,7 +16,7 @@ Route::group(['middleware' => ['web']], function () {
         return view('welcome');
     });
 
-    Route::group(['prefix' => 'admin' , 'namespace' => 'Admin'] , function (){
+    Route::group(['prefix' => 'lantinmaker' , 'namespace' => 'Admin'] , function (){
         require base_path('routes/admin.php');
     });
 
@@ -32,3 +32,6 @@ Route::group(['middleware' => ['web']], function () {
         require base_path('routes/blog.php');
     });
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

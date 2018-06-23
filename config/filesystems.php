@@ -64,6 +64,19 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'static' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'static.wawmam.com', //你的七牛域名
+                'https'     => '',         //你的HTTPS域名
+                'custom'    => '',     //你的自定义域名
+            ],
+            'access_key'=> 'QtJB6Q6oEYvvf7t01ldKceZxQebG-V7Zjr6KGQbb',  //AccessKey
+            'secret_key'=> 'owci_k7IXF3wqigsE0R4Pd3dJiI-mzhbe-2eudd8',  //SecretKey
+            'bucket'    => 'static',  //Bucket名字
+            'notify_url'=> '',  //持久化处理回调地址
+        ],
+
     ],
 
 ];
