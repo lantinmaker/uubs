@@ -107,7 +107,7 @@
     <form action="{{ url('blog/ajaxpublish') }}" data-save="{{ url('blog/ajaxsave') }}" method="post" class="container-fluid">
         {{ csrf_field() }}
         <div class="row">
-            <div class="col-xs-8 col-md-10 col-lg-10">
+            <div class="col-xs-8 col-md-8 col-lg-8">
                 <div class="row">
                     <label for="title" class="col-xs-4 col-md-4 col-lg-4 article-category-select article-label">标题</label>
                     <div class="col-xs-8 col-md-8 col-lg-8">
@@ -115,12 +115,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-4 col-md-2 col-lg-2">
+            <div class="col-xs-2 col-md-2 col-lg-2">
                 <div class="row">
                     <label for="category_id" class="col-md-4 article-category-select article-label">分类</label>
                     <div class="col-md-8">
                         <select name="category_id" id="category_id" class="article-category-select">
                             <option value="1">PHP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2">
+                <div class="row">
+                    <label for="category_id" class="col-md-4 article-category-select article-label">类型</label>
+                    <div class="col-md-8">
+                        <select name="category_id" id="category_id" class="article-category-select">
+                            <option value="o">原创</option>
+                            <option value="r">转载</option>
                         </select>
                     </div>
                 </div>

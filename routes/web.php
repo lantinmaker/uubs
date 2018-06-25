@@ -12,9 +12,7 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', "HomeController@index");
 
     Route::group(['prefix' => 'lantinmaker' , 'namespace' => 'Admin'] , function (){
         require base_path('routes/admin.php');
